@@ -4,11 +4,23 @@ C = ['c', 'C', 'see',]
 def outside():
     print('You are outside the house')
     anw = input('You can, A) walk back up to the door B) Leave the house.') 
-    
+    if anw in A:
+        door()
+    elif anw in B:
+        print('Suit yourself')
+    else:
+        print('Please input a valid answer')
+        
 def door():
     print('You are standing outside of the door, it's locked')
     anw = input('You can, A) walk back up to the door B) Leave the house.') 
-    
+    if anw in A:
+        door()
+    elif anw in B:
+        print('Suit yourself')
+    else:
+        print('Please input a valid answer')
+        
 def hallway():
     print('You are standing in a creepy old hallway')
     anw = input('You can, A) Go forward B) Turn right C) go back out the door')
