@@ -2,15 +2,15 @@ A = ['a', 'A', 'ey', 'AY']
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see',]
 def outside():
-    print()
+    print('You are outside the house')
     anw = input('You can, A) walk back up to the door B) Leave the house.') 
     
 def door():
-    print()
+    print('You are standing outside of the door, it's locked')
     anw = input('You can, A) walk back up to the door B) Leave the house.') 
     
 def hallway():
-    print()
+    print('You are standing in a creepy old hallway')
     anw = input('You can, A) Go forward B) Turn right C) go back out the door')
     
 def room1():
@@ -31,14 +31,14 @@ def seacretroom1():
     print()
     
 def PLAY_GAME():
-    print('introduction')
+    print('You are standing out side of a large old house')
     anw = input('You can, A) walk up to the door B) leave the house ')
     if anw in A:
         door()
     elif anw in B:
-        outside()
+        print('Suit yourself')
     else:
-        print('please input an answer')
+        print('Please input a valid answer')
         
         
 PLAY_GAME()
