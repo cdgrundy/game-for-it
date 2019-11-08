@@ -26,7 +26,7 @@ def room3():
     anw = input('You can, A) search room B) look in the closet C) leave the room')
 def garage():
     print()
-    awn = input('You can A) do something B) do something else C) don a cape and fight crime
+    awn = input('You can A) do something B) do something else C) don a cape and fight crime')
         
 def seacretroom1():
     print()
