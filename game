@@ -62,7 +62,7 @@ def room1():
     room1Fun()
     
 def room2():
-    def room1Fun():
+    def room2Fun():
         anw = input('You can, A) Go forward B) Turn right C) go back out the door') 
         if anw in A:
             room1()
@@ -72,13 +72,13 @@ def room2():
             door()
         else:
             print('please input a, b, or c')
-            room1Fun()
+            room2Fun()
             
     print('there is a short hallway stretching out in front of you')
-    room1Fun()
+    room2Fun()
     
 def room3():
-    def room1Fun():
+    def room3Fun():
         anw = input('You can, A) Go forward B) Turn right C) go back out the door') 
         if anw in A:
             room1()
@@ -88,10 +88,10 @@ def room3():
             door()
         else:
             print('please input a, b, or c')
-            room1Fun()
+            room3Fun()
             
     print('there is a short hallway stretching out in front of you')
-    room1Fun()
+    room3Fun()
     
 def garage():
     def garageFun():
