@@ -124,8 +124,8 @@ def PLAY_GAME():
                 PLAY_GAME()
             elif anw in No:
                 print('ok')
-            else 
-                print('I'll take that as a no. ')
+            else: 
+                print('Ill take that as a no. ')
         else:
             print('please input a, or b')
             PLAY_GAME_Fun()
