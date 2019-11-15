@@ -1,6 +1,7 @@
 A = ['a', 'A', 'ey', 'AY'] 
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
+D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 
@@ -93,18 +94,22 @@ def room2():
     
 def room3():
     def room3Fun():
-        print('You can, A) Go forward B) Turn right C) go back out the door\n') 
+        print('You can, A) Search cupboards B) Search the island C) Turn right D) Go back out to the hallway\n')
         awn = input('>')
         if anw in A:
-            room1()
+            print('You look in the cupboards, the\'re empty\n')
+            room3Fun()
         elif anw in B:
-            room2()
+            room2('You look in the island and find some cereal')
+            room3Fun()
         elif anw in C:
-            door()
+            garageFun()
+        elif awn in D:
+            hallway()
         else:
             print('\nplease input a, b, or c')
             room3Fun()
-    print('\nthere is a short hallway stretching out in front of you')
+    print('\nYou\'re in a small kitchen with an island in the center and some cupboards')
     room3Fun()
     
 def garage():
