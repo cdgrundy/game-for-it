@@ -1,7 +1,6 @@
 A = ['a', 'A', 'ey', 'AY'] 
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
-D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 
@@ -18,11 +17,14 @@ def outside():
             if anw in Yes:
                 PLAY_GAME()
             elif anw in No:
-                print('\nok')
+                print('')
+                print('ok')
             else: 
-                print('\nI\'ll take that as a no. ')
+                print('')
+                print('Ill take that as a no. ')
         else:
-            print('\nplease input a, or b')
+            print('')
+            print('please input a, or b')
             outsideFun()
     print('')
     print('You are standing outside of the house.')
@@ -60,25 +62,7 @@ def hallway():
         
 def room1():
     def room1Fun():
-        print('You can, A) Search room B) Turn on TV C) go back out to the hallway\n')
-        anw = input('>') 
-        if anw in A:
-            print('There is nothing of interest in this room\n')
-            room1Fun()
-        elif anw in B:
-            print('You turn the TV on, after a while the cartoons start to annoy you and you turn it back off')
-            room1Fun()
-        elif anw in C:
-            hallway()
-        else:
-            print('\nplease input a, b, or c')
-            room1Fun()
-    print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
-    room1Fun()
-    
-def room2():
-    def room2Fun():
-        print('You can, A) Go forward B) Turn right C) go back out the door\n')
+        print('You can, A) Go forward B) Turn right C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
             room1()
@@ -88,28 +72,41 @@ def room2():
             door()
         else:
             print('\nplease input a, b, or c')
-            room2Fun()
+            room1Fun()
     print('\nthere is a short hallway stretching out in front of you')
-    room2Fun()
+    room1Fun()
     
-def room3():
-    def room3Fun():
-        print('You can, A) Search cupboards B) Search the island C) Turn right D) Go back out to the hallway\n')
-        awn = input('>')
+def room2():
+    def room2Fun():
+        print('You can, A) look in the bunk beds B) look in the crib C) go back to the hallway\n')
+        anw = input('>') 
         if anw in A:
-            print('You look in the cupboards, the\'re empty\n')
-            room3Fun()
+            print('they\'re old and gross, looks like they havn\'t been used in quite a while\n')
+            room2Fun()
         elif anw in B:
-            room2('You look in the island and find some cereal')
-            room3Fun()
+            Crib()
         elif anw in C:
-            garageFun()
-        elif awn in D:
             hallway()
         else:
             print('\nplease input a, b, or c')
+            room2Fun()
+    print('\nYou\'re in a small bedroom with a bunk bed and a crib')
+    room1Fun()
+    
+def room3():
+    def room3Fun():
+        print('You can, A) Go forward B) Turn right C) go back out the door\n') 
+        awn = input('>')
+        if anw in A:
+            room1()
+        elif anw in B:
+            room2()
+        elif anw in C:
+            door()
+        else:
+            print('\nplease input a, b, or c')
             room3Fun()
-    print('\nYou\'re in a small kitchen with an island in the center and some cupboards')
+    print('\nthere is a short hallway stretching out in front of you')
     room3Fun()
     
 def garage():
@@ -137,7 +134,7 @@ def PLAY_GAME():
         if anw in A:
             door()
         elif anw in B:
-            print('\nSuit youself')
+            print('Suit youself')
             print('\ndo you want to restart?\n')
             anw = input('>')
             if anw in Yes:
@@ -147,7 +144,7 @@ def PLAY_GAME():
             else: 
                 print('\nIll take that as a no. ')
         else:
-            print('please input a, or b \n')
+            print('please input a, or b n/')
             PLAY_GAME_Fun()
     print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
     PLAY_GAME_Fun()
