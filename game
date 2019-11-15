@@ -17,14 +17,11 @@ def outside():
             if anw in Yes:
                 PLAY_GAME()
             elif anw in No:
-                print('')
-                print('ok')
+                print('\nok')
             else: 
-                print('')
-                print('Ill take that as a no. ')
+                print('\nI\'ll take that as a no. ')
         else:
-            print('')
-            print('please input a, or b')
+            print('\nplease input a, or b')
             outsideFun()
     print('')
     print('You are standing outside of the house.')
@@ -143,7 +140,7 @@ def PLAY_GAME():
             else: 
                 print('\nIll take that as a no. ')
         else:
-            print('please input a, or b n/')
+            print('please input a, or b \n')
             PLAY_GAME_Fun()
     print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
     PLAY_GAME_Fun()
