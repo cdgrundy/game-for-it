@@ -59,18 +59,20 @@ def hallway():
         
 def room1():
     def room1Fun():
-        print('You can, A) Go forward B) Turn right C) go back out to the hallway\n')
+        print('You can, A) Search room B) Turn on TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            room1()
+            print('There is nothing of interest in this room\n')
+            room1Fun()
         elif anw in B:
-            room2()
+            print('You turn the TV on, after a while the cartoons start to annoy you and you turn it back off')
+            room1Fun()
         elif anw in C:
-            door()
+            hallway()
         else:
             print('\nplease input a, b, or c')
             room1Fun()
-    print('\nthere is a short hallway stretching out in front of you')
+    print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     room1Fun()
     
 def room2():
