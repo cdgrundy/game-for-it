@@ -1,6 +1,7 @@
 A = ['a', 'A', 'ey', 'AY'] 
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
+D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 
@@ -62,20 +63,40 @@ def hallway():
         
 def room1():
     def room1Fun():
-        print('You can, A) Go forward B) Turn right C) go back out to the hallway\n')
+        print('You can, A) Search room B) Turn on TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            room1()
+            print('There is nothing of interest in this room\n')
+            room1Fun()
         elif anw in B:
-            room2()
+            print('You turn the TV on, after a while the cartoons start to annoy you and you turn it back off')
+            room1Fun()
         elif anw in C:
-            door()
+            hallway()
         else:
             print('\nplease input a, b, or c')
             room1Fun()
-    print('\nthere is a short hallway stretching out in front of you')
+    print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     room1Fun()
     
+    
+    
+    
+    
+    
+def Crib():
+    def cribFun():
+        print('You can A) Search crib B) Feel matress C) Enter crib D\n')
+        awn = input('>')
+        if awn in A:
+            print('You find a creepy old doll\n')
+            cribFun
+
+
+
+
+
+
 def room2():
     def room2Fun():
         print('You can, A) look in the bunk beds B) look in the crib C) go back to the hallway\n')
@@ -84,7 +105,7 @@ def room2():
             print('they\'re old and gross, looks like they havn\'t been used in quite a while\n')
             room2Fun()
         elif anw in B:
-            Crib()
+            cribFun()
         elif anw in C:
             hallway()
         else:
