@@ -4,7 +4,7 @@ C = ['c', 'C', 'see']
 D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
-
+TV_On = False
 def outside():
     def outsideFun():
         print('You can, A) walk back up to the door B) Leave the house.\n')
@@ -69,7 +69,8 @@ def room1():
             print('There is nothing of interest in this room\n')
             room1Fun()
         elif anw in B:
-            print('You turn the TV on, after a while the cartoons start to annoy you and you turn it back off')
+            TV_On = True
+            print('You turn the TV on and cartoons start blaring out of it')
             room1Fun()
         elif anw in C:
             hallway()
@@ -79,31 +80,13 @@ def room1():
     print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     room1Fun()
     
-    
-    
-    
-    
-    
 def Crib():
     def cribFun():
-        print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from the crib\n')
+        print('You can A) Search crib B) Feel matress C) Enter crib D\n')
         awn = input('>')
         if awn in A:
             print('You find a creepy old doll\n')
-            cribFun()
-        elif awn in B:
-            print('The matress feels nice and squishy and reminds you of you mother.\n')
-            cribFun()
-        elif  awn in C:
-            if TV_On == True:
-                print('You lie in the crib and sudenely, you fall through!\n')
-            if TV_On == False:
-                print('
-
-
-
-
-
+            cribFun
 
 def room2():
     def room2Fun():
