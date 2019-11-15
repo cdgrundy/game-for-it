@@ -3,35 +3,46 @@ B = ['b', 'B', 'bee']
 C = ['c', 'C', 'see']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
+
 def outside():
     def outsideFun():
-        anw = input('You can, A) walk back up to the door B) Leave the house.') 
+        print('You can, A) walk back up to the door B) Leave the house.\n')
+        anw = input('>') 
         if anw in A:
             door()
         elif anw in B:
+            print('')
             print('Suit youself')
         else:
+            print('')
             print('please input a, or b')
             outsideFun()
+    print('')
     print('You are standing outside of the house.')
     outsideFun()
     
 def door():
     def doorFun():
-        anw = input('You can, A) go through the door B) Go back to the front lawn. ') 
+        print('You can, A) go through the door B) Go back to the front lawn.')
+        print('')
+        anw = input('>')
         if anw in A:
             hallway()
         elif anw in B:
             outside()
         else:
+            print('')
             print('please input a, or b')
             doorFun()
+    print('')
     print('You are standing in front of a large wooden door.')
     doorFun()
         
 def hallway():
     def hallwayFun():
-        anw = input('You can, A) Go forward B) Turn right C) go back out the door') 
+        print('You can, A) Go forward B) Turn right C) go back out the door')
+        print('')
+        anw = input('>') 
         if anw in A:
             room1()
         elif anw in B:
@@ -39,15 +50,18 @@ def hallway():
         elif anw in C:
             door()
         else:
+            print('')
             print('please input a, b, or c')
             hallwayFun()
-            
+    print('')       
     print('there is a short hallway stretching out in front of you')
     hallwayFun()
         
 def room1():
     def room1Fun():
-        anw = input('You can, A) Go forward B) Turn right C) go back out the door') 
+        print('You can, A) Go forward B) Turn right C) go back out to the hallway')
+        print('')
+        anw = input('>') 
         if anw in A:
             room1()
         elif anw in B:
@@ -55,15 +69,17 @@ def room1():
         elif anw in C:
             door()
         else:
+            print('')
             print('please input a, b, or c')
             room1Fun()
-            
+    print('')     
     print('there is a short hallway stretching out in front of you')
     room1Fun()
     
 def room2():
     def room2Fun():
-        anw = input('You can, A) Go forward B) Turn right C) go back out the door') 
+        print('You can, A) Go forward B) Turn right C) go back out the door')
+        anw = input('') 
         if anw in A:
             room1()
         elif anw in B:
@@ -75,7 +91,7 @@ def room2():
             room2Fun()
             
     print('there is a short hallway stretching out in front of you')
-    room2Fun()
+    room1Fun()
     
 def room3():
     def room3Fun():
@@ -89,24 +105,27 @@ def room3():
         else:
             print('please input a, b, or c')
             room3Fun()
-            
     print('there is a short hallway stretching out in front of you')
     room3Fun()
     
 def garage():
     def garageFun():
-        anw = input('You can A) do something B) do something else C) don a cape and fight crime')
+        print('You can A) do something B) do something else C) don a cape and fight crime')
+        anw = input('>')
         if anw in A:
             room1()
         elif anw in B:
+            print('')
             print('Suit youself')
         elif anw in C:
+            print('')
             print('You take an old cape sitting on the ground and put it on. After a while of serching you come across a robbery! You run in and try and stop the burgalurs but they beat you up. You walk home, defeated.')
         else:
+            print('')
             print('please input an answer')
-            
-print('you are in  a garage')
-garageFun()
+    print('')        
+    print('you are in  a garage')
+    garageFun()
         
 def seacretroom1():
     print()
@@ -114,21 +133,30 @@ def seacretroom1():
     
 def PLAY_GAME():
     def PLAY_GAME_Fun():
-        anw = input('You can, A) walk up to the door B) leave the house. ') 
+        print('You can, A) walk up to the door B) leave the house.')
+        anw = input('>') 
         if anw in A:
             door()
         elif anw in B:
+            print('')
             print('Suit youself')
-            anw = input('do you want to restart?')
+            print('')
+            print('do you want to restart?')
+            print('')
+            anw = input('>')
             if anw in Yes:
                 PLAY_GAME()
             elif anw in No:
+                print('')
                 print('ok')
             else: 
+                print('')
                 print('Ill take that as a no. ')
         else:
-            print('please input a, or b')
+            print('please input a, or b n/')
+            print('')
             PLAY_GAME_Fun()
+    print('') 
     print('You are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
     PLAY_GAME_Fun()
         
