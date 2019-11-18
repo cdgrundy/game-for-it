@@ -93,7 +93,7 @@ def Crib():
         elif awn in C:
             if TV_On == True: 
                 print('You lie there for a while then suddenly, you fall through\n')
-            else if TV_On == False:
+            else TV_On == False:
                 print('You lie there for a while and start to feel like a pedophile waiting for its prey\n')
                 cribFun()
         elif awn in D:
