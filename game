@@ -5,7 +5,7 @@ D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 TV_On = False
-OnOrOff = on
+OnOrOff = ('on')
 def outside():
     def outsideFun():
         print('You can, A) walk back up to the door B) Leave the house.\n')
@@ -63,50 +63,54 @@ def hallway():
     hallwayFun()
         
 def room1():
-    def room1Fun():
-        print('You can, A) Search room B) Turn',OnOrOff 'TV C) go back out to the hallway\n')
+    def room1Fun(OnOrOff, TV_On):
+        print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('There is nothing of interest in this room\n')
-            room1Fun()
+            print('There is nothing of interest in this room')
+            room1Fun(OnOrOff, TV_On)
         elif anw in B:
             if TV_On == False:
                 TV_On = True
                 print('You turn the TV on and cartoons start blaring out of it')
-                room1Fun()
-             else:
-                TV_On = True
+                OnOrOff = ('off')
+                room1Fun(OnOrOff, TV_On)
+            else:
+                TV_On = False
                 print('You turn the cartoons back off')
-                room1Fun()
+                OnOrOff = ('on')
+                room1Fun(OnOrOff, TV_On)
         elif anw in C:
             hallway()
         else:
             print('\nplease input a, b, or c')
-            room1Fun()
-    print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
-    room1Fun()
+            room1Fun(OnOrOff, TV_On)
+    print('\nYou\'re in a large room, with a couch at one end and a TV at the other')
+    room1Fun(OnOrOff, TV_On)
     
 def Crib():
-    def cribFun():
+    def cribFun(TV_On):
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         awn = input('>')
         if awn in A:
-            print('You find a creepy old doll\n')
-            cribFun()
+            print('You find a creepy old doll')
+            cribFun(TV_On)
         elif awn in B:
-            print('The matress feels very soft and squishy\n')
-            cribFun()
+            print('The matress feels very soft and squishy')
+            cribFun(TV_On)
         elif awn in C:
             if TV_On == True: 
-                print('You lie there for a while then suddenly, you fall through\n')
+                print('You lie there for a while then suddenly, you fall through')
             else:
-                print('You lie there for a while and start to feel like a pedophile waiting for its prey\n')
-                cribFun()
+                print('You lie there for a while and start to feel like a pedophile waiting for its prey')
+                cribFun(TV_On)
         elif awn in D:
-            room2Fun()     
+            room2()     
         else:
             print('\nplease input a, b, or c')
-            cribFun()
+            cribFun(TV_On)
+    print('\nit\'s an old crib')
+    cribFun(TV_On)
             
 
 def room2():
@@ -114,18 +118,17 @@ def room2():
         print('You can, A) look in the bunk beds B) look in the crib C) go back to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('they\'re old and gross, looks like they havn\'t been used in quite a while\n')
+            print('they\'re old and gross, looks like they havn\'t been used in quite a while')
             room2Fun()
         elif anw in B:
-            cribFun()
+            Crib()
         elif anw in C:
             hallway()
         else:
             print('\nplease input a, b, or c')
             room2Fun()
     print('\nYou\'re in a small bedroom with a bunk bed and a crib')
-    room1Fun()
-    
+    room2Fun()
 def room3():
     def room3Fun():
         print('You can, A) Go forward B) Turn right C) go back out the door\n') 
@@ -184,3 +187,4 @@ def PLAY_GAME():
         
         
 PLAY_GAME()
+
