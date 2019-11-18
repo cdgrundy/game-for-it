@@ -5,6 +5,7 @@ D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 TV_On = False
+OnOrOff = ('on')
 def outside():
     def outsideFun():
         print('You can, A) walk back up to the door B) Leave the house.\n')
@@ -63,15 +64,19 @@ def hallway():
         
 def room1():
     def room1Fun():
-        print('You can, A) Search room B) Turn on TV C) go back out to the hallway\n')
+        print('You can, A) Search room B) Turn',OnOrOff 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
             print('There is nothing of interest in this room\n')
             room1Fun()
         elif anw in B:
-            TV_On = True
-            print('You turn the TV on and cartoons start blaring out of it')
-            room1Fun()
+            if TV_On == False:
+                TV_On = True
+                print('You turn the TV on and cartoons start blaring out of it')
+                room1Fun()
+             else:
+                TV_On = False
+                print('You switch',OnOrOff 'the TV, it was getting loud anyway')
         elif anw in C:
             hallway()
         else:
@@ -82,26 +87,11 @@ def room1():
     
 def Crib():
     def cribFun():
-        print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
+        print('You can A) Search crib B) Feel matress C) Enter crib D\n')
         awn = input('>')
         if awn in A:
             print('You find a creepy old doll\n')
-            cribFun()
-        elif awn in B:
-            print('The matress feels very soft and squishy\n')
-            cribFun()
-        elif awn in C:
-            if TV_On == True: 
-                print('You lie there for a while then suddenly, you fall through\n')
-        elif awn in D:
-            room2Fun()
-            else if TV_On == False:
-                print('You lie there for a while and start to feel like a pedophile waiting for its prey\n')
-                cribFun()
-        else:
-            print('\nplease input a, b, or c')
-            cribFun()
-            
+            cribFun
 
 def room2():
     def room2Fun():
