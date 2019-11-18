@@ -5,6 +5,7 @@ D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 TV_On = False
+OnOrOff = on
 def outside():
     def outsideFun():
         print('You can, A) walk back up to the door B) Leave the house.\n')
@@ -63,15 +64,20 @@ def hallway():
         
 def room1():
     def room1Fun():
-        print('You can, A) Search room B) Turn on TV C) go back out to the hallway\n')
+        print('You can, A) Search room B) Turn',OnOrOff 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
             print('There is nothing of interest in this room\n')
             room1Fun()
         elif anw in B:
-            TV_On = True
-            print('You turn the TV on and cartoons start blaring out of it')
-            room1Fun()
+            if TV_On == False:
+                TV_On = True
+                print('You turn the TV on and cartoons start blaring out of it')
+                room1Fun()
+             else:
+                TV_On = True
+                print('You turn the cartoons back off')
+                room1Fun()
         elif anw in C:
             hallway()
         else:
@@ -93,7 +99,7 @@ def Crib():
         elif awn in C:
             if TV_On == True: 
                 print('You lie there for a while then suddenly, you fall through\n')
-            else TV_On == False:
+            else if TV_On == False:
                 print('You lie there for a while and start to feel like a pedophile waiting for its prey\n')
                 cribFun()
         elif awn in D:
