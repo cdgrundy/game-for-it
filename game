@@ -82,11 +82,26 @@ def room1():
     
 def Crib():
     def cribFun():
-        print('You can A) Search crib B) Feel matress C) Enter crib D\n')
+        print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         awn = input('>')
         if awn in A:
             print('You find a creepy old doll\n')
-            cribFun
+            cribFun()
+        elif awn in B:
+            print('The matress feels very soft and squishy\n')
+            cribFun()
+        elif awn in C:
+            if TV_On == True: 
+                print('You lie there for a while then suddenly, you fall through\n')
+        elif awn in D:
+            room2Fun()
+            else if TV_On == False:
+                print('You lie there for a while and start to feel like a pedophile waiting for its prey\n')
+                cribFun()
+        else:
+            print('\nplease input a, b, or c')
+            cribFun()
+            
 
 def room2():
     def room2Fun():
