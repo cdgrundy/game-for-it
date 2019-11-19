@@ -27,7 +27,7 @@ def outside():
             print('please input a, or b')
             outsideFun()
     print('')
-    print('You are standing outside of the house.')
+    print('You are standing outside of the house.\n')
     outsideFun()
     
 def door():
@@ -41,7 +41,7 @@ def door():
         else:
             print('\nplease input a, or b')
             doorFun()
-    print('\nYou are standing in front of a large wooden door.')
+    print('\nYou are standing in front of a large wooden door.\n')
     doorFun()
         
 def hallway():
@@ -57,7 +57,7 @@ def hallway():
         else:
             print('\nplease input a, b, or c')
             hallwayFun()       
-    print('\nthere is a short hallway stretching out in front of you')
+    print('\nthere is a short hallway stretching out in front of you\n')
     hallwayFun()
         
 def room1(OnOrOff):
@@ -85,7 +85,7 @@ def room1(OnOrOff):
         else:
             print('\nplease input a, b, or c')
             OnOrOff = room1Fun(OnOrOff, TV_On)
-    print('\nYou\'re in a large room, with a couch at one end and a TV at the other')
+    print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     OnOrOff = room1Fun(OnOrOff, TV_On)
     
 def Crib():
@@ -129,6 +129,7 @@ def room2():
             room2Fun()
     print('\nYou\'re in a small bedroom with a bunk bed and a crib\n')
     room2Fun()
+
 def room3():
     def room3Fun():
         print('You can, A) Go forward B) Turn right C) go back out the door\n') 
@@ -142,7 +143,7 @@ def room3():
         else:
             print('\nplease input a, b, or c')
             room3Fun()
-    print('\nthere is a short hallway stretching out in front of you')
+    print('\nthere is a short hallway stretching out in front of you\n')
     room3Fun()
     
 def garage():
@@ -157,7 +158,7 @@ def garage():
             print('\nYou take an old cape sitting on the ground and put it on. After a while of serching you come across a robbery! You run in and try and stop the burgalurs but they beat you up. You walk home, defeated.')
         else:
             print('\nplease input an answer')       
-    print('\nyou are in  a garage')
+    print('\nyou are in  a garage\n')
     garageFun()
         
 def seacretroom1():
@@ -182,7 +183,7 @@ def PLAY_GAME():
         else:
             print('please input a, or b n/')
             PLAY_GAME_Fun()
-    print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
+    print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up\n')
     PLAY_GAME_Fun()
         
         
