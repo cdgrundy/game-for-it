@@ -19,11 +19,9 @@ def outside():
             if anw in Yes:
                 PLAY_GAME()
             elif anw in No:
-                print('')
-                print('ok')
+                print('\nok')
             else: 
-                print('')
-                print('Ill take that as a no. ')
+                print('\nIll take that as a no. ')
         else:
             print('')
             print('please input a, or b')
@@ -111,7 +109,7 @@ def Crib():
         else:
             print('\nplease input a, b, or c')
             cribFun(TV_On)
-    print('\nit\'s an old crib')
+    print('\nit\'s an old crib\n')
     cribFun(TV_On)
             
 
@@ -129,7 +127,7 @@ def room2():
         else:
             print('\nplease input a, b, or c')
             room2Fun()
-    print('\nYou\'re in a small bedroom with a bunk bed and a crib')
+    print('\nYou\'re in a small bedroom with a bunk bed and a crib\n')
     room2Fun()
 def room3():
     def room3Fun():
