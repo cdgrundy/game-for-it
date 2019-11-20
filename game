@@ -14,8 +14,8 @@ def outside():
             door()
         elif anw in B:
             print('\nSuit youself')
-            print('do you want to restart?')
-            anw = input('\n>')
+            print('\ndo you want to keep going?\n')
+            anw = input('>')
             if anw in Yes:
                 PLAY_GAME()
             elif anw in No:
@@ -65,18 +65,18 @@ def room1(OnOrOff):
         print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('There is nothing of interest in this room')
+            print('\nThere is nothing of interest in this room\n')
             OnOrOff = room1Fun(OnOrOff, TV_On)
         elif anw in B:
             if TV_On == False:
                 TV_On = True
-                print('You turn the TV on and cartoons start blaring out of it')
+                print('\nYou turn the TV on and cartoons start blaring out of it\n')
                 OnOrOff = ('off')
                 OnOrOff = room1Fun(OnOrOff, TV_On)
                 return OnOrOff
             else:
                 TV_On = False
-                print('You turn the cartoons back off')
+                print('\nYou turn the cartoons back off\n')
                 OnOrOff = ('on')
                 OnOrOff = room1Fun(OnOrOff, TV_On)
                 return OnOrOff
@@ -93,16 +93,16 @@ def Crib():
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         awn = input('>')
         if awn in A:
-            print('You find a creepy old doll')
+            print('\nYou find a creepy old doll\n')
             cribFun(TV_On)
         elif awn in B:
-            print('The matress feels very soft and squishy')
+            print('\nThe matress feels very soft and squishy\n')
             cribFun(TV_On)
         elif awn in C:
             if TV_On == True: 
                 print('You lie there for a while then suddenly, you fall through')
             else:
-                print('You lie there for a while and start to feel like a pedophile waiting for its prey')
+                print('\nYou lie there for a while and start to feel like a pedophile waiting for its prey\n')
                 cribFun(TV_On)
         elif awn in D:
             room2()     
@@ -118,7 +118,7 @@ def room2():
         print('You can, A) look in the bunk beds B) look in the crib C) go back to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('they\'re old and gross, looks like they havn\'t been used in quite a while')
+            print('\nthey\'re old and gross, looks like they havn\'t been used in quite a while\n')
             room2Fun()
         elif anw in B:
             Crib()
