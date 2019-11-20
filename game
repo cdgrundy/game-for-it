@@ -168,9 +168,25 @@ def garage():
     print('\nyou are in  a large garage\n')
     garageFun()
         
-def seacretroom1():
-        print('You can A) search the room B) go right C) leave the room')
+def secretroom1():
+    def secretroom1Fun():        
+        if Light_On == False:
+            print('You can A) Find the light switch\n')
+        else:
+            print('You can A) Turn off the light B) Search room C) Go forward\n')
         awn = input('>')
+        if awn in A:
+            if Light_On == False:
+                print('\nYou find the light switch and are momentarily blinded')
+                Light_On = True
+                secretroom1Fun()
+            else:
+                print('\nYou turn off the light and wait for your eyes to adjust')
+                Light_On = False
+                secretroom1Fun()
+        if awn in B:
+        
+        
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         print('You can, A) walk up to the door B) leave the house.\n')
