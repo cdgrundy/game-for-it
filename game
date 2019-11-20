@@ -6,6 +6,8 @@ Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
 TV_On = False
 OnOrOff = ('on')
+Light_On = False
+OnOrOff2 = ('on')
 
 
 def outside():
@@ -175,8 +177,22 @@ def garage():
 
 def secretroom1():
     def secretroom1Fun():        
-        print('You can A) Find the light switch')
+        if Light_On == False:
+            print('You can A) Find the light switch\n')
+        else:
+            print('You can A) Turn off the light B) Search room C) Go forward\n')
         awn = input('>')
+        if awn in A:
+            if Light_On == False:
+                print('\nYou find the light switch and are momentarily blinded')
+                Light_On = True
+                secretroom1Fun()
+            else:
+                print('\nYou turn off the light and wait for your eyes to adjust')
+                Light_On = False
+                secretroom1Fun()
+        if awn in B:
+        
     print('\nYou are in a dark room with damp walls, you can hear water drippin in the distance. You can\'t see anything\n')
 
 def PLAY_GAME():
