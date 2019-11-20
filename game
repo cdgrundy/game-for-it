@@ -175,7 +175,7 @@ def secretroom1():
         if Light_On == False:
             print('You can A) Find the light switch\n')
         else:
-            print('You can A) Turn',OnOrOff, 'the light B) Search room C) Go forward\n')
+            print('You can A) Turn',OnOrOff2, 'the light B) Search room C) Go forward\n')
         awn = input('>')
         if awn in A:
             if Light_On == False:
