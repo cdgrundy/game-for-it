@@ -173,10 +173,11 @@ def garage():
     garageFun()
         
 
-def seacretroom1():
-        print('You can A) search the room B) go right C) leave the room')
+def secretroom1():
+    def secretroom1Fun():        
+        print('You can A) Find the light switch')
         awn = input('>')
-
+    print('\nYou are in a dark room with damp walls, you can hear water drippin in the distance. You can\'t see anything\n')
 
 def PLAY_GAME():
     def PLAY_GAME_Fun():
