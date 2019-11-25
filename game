@@ -108,7 +108,7 @@ def Crib():
                 print('You lie there for a while then suddenly, you fall through')
                 secretroom1()
             else:
-                print('\nYou lie there for a while and nothing happens\n')
+                print('\nYou lie there for a while and start to feel like a pedophile waiting for its prey\n')
                 cribFun()
         elif awn in D:
             room2()     
@@ -175,9 +175,9 @@ def secretroom1():
         if Light_On == False:
             print('You can A) Find the light switch\n')
         else:
-            print('You can A) Turn',OnOrOff2, 'the light B) Search room C) Go forward\n')
-        awn = input('>')
-        if awn in A:
+            print('You can A) Turn',OnOrOff2, 'the light B) Search room C) Go back up\n')
+        anw input('>')
+        if anw A:
             if Light_On == False:
                 print('\nYou find the light switch and are momentarily blinded')
                 OnOrOff2 = ('off')
@@ -188,8 +188,26 @@ def secretroom1():
                 OnOrOff2 = ('on')
                 Light_On = False
                 secretroom1Fun()
-        if awn in B:
-            
+         elif anw in B:
+            if Light_On == False:
+                print('\n You fumble around in the dark for a while and find nothing.')
+                secretroom1Fun()
+            else:
+                print('You look around but all you can see is the light switch and some mold on the floor')
+                secretroom1Fun
+         elif anw in C:    
+                if Lights_On == False:
+                    print('You look for the ladder but you trip and fall insted')
+                    secertroom1Fun()
+                else:
+                    print('you climb out of the crib')
+                    crib() 
+         else:
+            print('please input a, b, or ,c')
+            secretroom1Fun()
+    print('\nyou are in a large damp cold room, the lights are off')
+    secretroom1Fun()
+    
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         print('You can, A) walk up to the door B) leave the house.\n')
