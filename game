@@ -108,7 +108,7 @@ def Crib():
                 print('You lie there for a while then suddenly, you fall through')
                 secretroom1()
             else:
-                print('\nYou lie there for a while and start to feel like a pedophile waiting for its prey\n')
+                print('\nYou lie there for a while and nothing happens\n')
                 cribFun()
         elif awn in D:
             room2()     
