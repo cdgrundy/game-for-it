@@ -24,7 +24,7 @@ def outside():
                 print('\nIll take that as a no. ')
         else:
             print('')
-            print('please input a, or b')
+            print('please input a, or b\n')
             outsideFun()
     print('')
     print('You are standing outside of the house.\n')
@@ -39,7 +39,7 @@ def door():
         elif anw in B:
             outside()
         else:
-            print('\nplease input a, or b')
+            print('\nplease input a, or b\n')
             doorFun()
     print('\nYou are standing in front of a large wooden door.\n')
     doorFun()
@@ -57,7 +57,7 @@ def hallway():
         elif anw in D:
             outside()
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, or c\n')
             hallwayFun()       
     print('\nthere is a short hallway stretching out in front of you\n')
     hallwayFun()
@@ -87,7 +87,7 @@ def room1():
         elif anw in C:
             hallway()
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, or c\n')
             OnOrOff = room1Fun(OnOrOff, TV_On)
     print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     OnOrOff = room1Fun(OnOrOff, TV_On)
@@ -108,12 +108,12 @@ def Crib():
                 print('You lie there for a while then suddenly, you fall through')
                 secretroom1()
             else:
-                print('\nYou lie there for a while and start to feel like a pedophile waiting for its prey\n')
+                print('\nYou lie there for a while but  nothing happens\n')
                 cribFun()
         elif awn in D:
             room2()     
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, c or d\n')
             cribFun()
     print('\nit\'s an old crib\n')
     cribFun()
@@ -131,7 +131,7 @@ def room2():
         elif anw in C:
             hallway()
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, or c\n')
             room2Fun()
     print('\nYou\'re in a small bedroom with a bunk bed and a crib\n')
     room2Fun()
@@ -148,7 +148,7 @@ def room3():
         elif anw in C:
             hallway()
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, or c\n')
             room3Fun()
     print('\nit's a little kitchen\n')
     room3Fun()
@@ -164,7 +164,7 @@ def garage():
         elif anw in C:
             print('\nYou take an old cape sitting on the ground and put it on. After a while of serching you come across a robbery! You run in and try and stop the burgalurs but they beat you up. You walk home, defeated.')
         else:
-            print('\nplease input an answer')       
+            print('\nplease input a, b or c\n')       
     print('\nyou are in  a large garage\n')
     garageFun()
         
@@ -203,7 +203,7 @@ def secretroom1():
                     print('you climb out of the crib')
                     crib() 
          else:
-            print('please input a, b, or ,c')
+            print('please input a, b, or ,c\n')
             secretroom1Fun()
     print('\nyou are in a large damp cold room, the lights are off')
     secretroom1Fun()
@@ -225,7 +225,7 @@ def PLAY_GAME():
             else: 
                 print('\nIll take that as a no. ')
         else:
-            print('please input a, or b n/')
+            print('please input a, or bn/')
             PLAY_GAME_Fun()
     print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up\n')
     PLAY_GAME_Fun()
