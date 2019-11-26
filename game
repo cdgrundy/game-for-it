@@ -1,4 +1,4 @@
-'] 
+A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
 D = ['d', 'D', 'dee']
@@ -8,6 +8,8 @@ TV_On = False
 OnOrOff = ('on')
 Light_On = False
 OnOrOff2 = ('on')
+
+
 def outside():
     def outsideFun():
         print('You can, A) walk back up to the door B) Leave the house.\n')
@@ -25,13 +27,12 @@ def outside():
             else: 
                 print('\nIll take that as a no. ')
         else:
-            print('')
-            print('please input a, or b')
+            print('\nplease input a, or b')
             outsideFun()
-    print('')
-    print('You are standing outside of the house.\n')
+    print('\nYou are standing outside of the house.\n')
     outsideFun()
-    
+ 
+ 
 def door():
     def doorFun():
         print('You can, A) go through the door B) Go back to the front lawn.\n')
@@ -45,10 +46,11 @@ def door():
             doorFun()
     print('\nYou are standing in front of a large wooden door.\n')
     doorFun()
-        
+    
+    
 def hallway():
     def hallwayFun():
-        print('You can, A) Go forward B) Turn right C) Turn left D) Go back outside')
+        print('You can, A) Go forward B) Turn right C) Turn left D) Go back outside\n')
         anw = input('>') 
         if anw in A:
             room1()
@@ -63,6 +65,7 @@ def hallway():
             hallwayFun()       
     print('\nthere is a short hallway stretching out in front of you\n')
     hallwayFun()
+        
         
 def room1():
     def room1Fun():
@@ -94,6 +97,7 @@ def room1():
     print('\nYou\'re in a large room, with a couch at one end and a TV at the other\n')
     OnOrOff = room1Fun()
     
+    
 def Crib():
     def cribFun():
         global TV_On
@@ -107,15 +111,15 @@ def Crib():
             cribFun()
         elif awn in C:
             if TV_On == True: 
-                print('You lie there for a while then suddenly, you fall through')
+                print('\nYou lie there for a while then suddenly, you fall through')
                 secretroom1()
             else:
-                print('\nYou lie there for a while and start to feel like a pedophile waiting for its prey\n')
+                print('\nYou lie there for a while but nothing happens\n')
                 cribFun()
         elif awn in D:
             room2()     
         else:
-            print('\nplease input a, b, or c')
+            print('\nplease input a, b, or c\n')
             cribFun()
     print('\nit\'s an old crib\n')
     cribFun()
@@ -138,12 +142,13 @@ def room2():
     print('\nYou\'re in a small bedroom with a bunk bed and a crib\n')
     room2Fun()
 
+
 def room3():
     def room3Fun():
         print('You can, A) search the room B) go down stairs C) go back out the door\n') 
-        awn = input('>')
+        anw = input('>')
         if anw in A:
-            print('you find some moldy food and some cannned food. but non of it looks safe to eat')
+            print('\nyou find some moldy food and some cannned food. but non of it looks safe to eat\n')
             room3Fun()
         elif anw in B:
             garage()
@@ -152,23 +157,27 @@ def room3():
         else:
             print('\nplease input a, b, or c')
             room3Fun()
-    print('\nit\'s a little kitchen\n')
+    print('\nYou are in a small kitchen. There are cupboards and a stove top. There is a staircase leading down.\n')
     room3Fun()
+    
     
 def garage():
     def garageFun():
         print('You can A) look in the cars B) go back up stairs C) don a cape and fight crime\n')
         anw = input('>')
         if anw in A:
-            room1()
+            print('\nThe car is very old, the leather is peeling and the air is thick with dust.\n')
+            garageFun()
         elif anw in B:
-            print('\nSuit youself')
+            room3()
         elif anw in C:
-            print('\nYou take an old cape sitting on the ground and put it on. After a while of serching you come across a robbery! You run in and try and stop the burgalurs but they beat you up. You walk home, defeated.')
+            print('\nYou take an old cape sitting on the ground and put it on. After a while of searching you come across a robbery! You run in \nand try and stop the burgalurs but they beat you up. You walk back, defeated.')
+            PLAY_GAME()
         else:
             print('\nplease input an answer')       
     print('\nyou are in  a large garage\n')
     garageFun()
+        
         
 def secretroom1():
     def secretroom1Fun():
@@ -178,7 +187,7 @@ def secretroom1():
         anw = input('>')
         if anw in A:
             if Light_On == False:
-                print('\nYou find the light switch and are momentarily blinded')
+                print('\nYou find the light switch and are momentarily blinded\n')
                 OnOrOff2 = ('off')
                 Light_On = True
                 secretroom1Fun()
@@ -189,23 +198,24 @@ def secretroom1():
                 secretroom1Fun()
         elif anw in B:
             if Light_On == False:
-                print('\n You fumble around in the dark for a while and find nothing.')
+                print('\n You fumble around in the dark for a while and find nothing.\n')
                 secretroom1Fun()
             else:
-                print('You look around but all you can see is the light switch and some mold on the floor')
+                print('\nYou look around but all you can see is the light switch and some mold on the floor\n')
                 secretroom1Fun()
         elif anw in C:    
                 if Light_On == False:
-                    print('You look for the ladder but you trip and fall insted')
+                    print('You look for the ladder but you trip and fall instead\n')
                     secretroom1Fun()
                 else:
-                    print('you climb out of the crib')
+                    print('\nyou climb out of the crib')
                     Crib() 
         else:
             print('please input a, b, or ,c')
             secretroom1Fun()
-    print('\nyou are in a large damp cold room, the lights are off')
+    print('\nyou are in a large damp cold room, the lights are off\n')
     secretroom1Fun()
+    
     
 def PLAY_GAME():
     def PLAY_GAME_Fun():
@@ -214,17 +224,17 @@ def PLAY_GAME():
         if anw in A:
             door()
         elif anw in B:
-            print('Suit youself')
-            print('\ndo you want to restart?\n')
+            print('\nSuit youself')
+            print('\ndo you want to keep going?\n')
             anw = input('>')
             if anw in Yes:
-                PLAY_GAME()
+                PLAY_GAME_Fun()
             elif anw in No:
                 print('\nok')
             else: 
                 print('\nIll take that as a no. ')
         else:
-            print('please input a, or b n/')
+            print('\please input a, or b\n')
             PLAY_GAME_Fun()
     print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up\n')
     PLAY_GAME_Fun()
