@@ -192,7 +192,7 @@ def secretroom1():
                 Light_On = True
                 secretroom1Fun()
             else:
-                print('\nYou turn off the light and wait for your eyes to adjust')
+                print('\nYou turn off the light and wait for your eyes to adjust\n')
                 OnOrOff2 = ('on')
                 Light_On = False
                 secretroom1Fun()
@@ -211,7 +211,7 @@ def secretroom1():
                     print('\nyou climb out of the crib')
                     Crib() 
         else:
-            print('please input a, b, or ,c')
+            print('\nplease input a, b, or ,c\n')
             secretroom1Fun()
     print('\nyou are in a large damp cold room, the lights are off\n')
     secretroom1Fun()
@@ -219,7 +219,7 @@ def secretroom1():
     
 def PLAY_GAME():
     def PLAY_GAME_Fun():
-        print('You can, A) walk up to the door B) leave the house.\n')
+        print('\nYou can, A) walk up to the door B) leave the house.\n')
         anw = input('>') 
         if anw in A:
             door()
@@ -236,7 +236,7 @@ def PLAY_GAME():
         else:
             print('\please input a, or b\n')
             PLAY_GAME_Fun()
-    print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up\n')
+    print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
     PLAY_GAME_Fun()
         
         
