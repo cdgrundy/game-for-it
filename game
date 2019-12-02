@@ -1,3 +1,4 @@
+import time
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
@@ -201,8 +202,15 @@ def secretroom1():
                 print('\n You fumble around in the dark for a while and find nothing.\n')
                 secretroom1Fun()
             else:
-                print('\nYou look around but all you can see is the light switch and some mold on the floor\n')
-                secretroom1Fun()
+                print('\nYou look around and after a while you step on a pressure plate and a door opens in front of you\n Do you want to go in?\n')
+                anw = input('>')
+                if anw in Yes:
+                    secretroom2()
+                elif anw in No:
+                    secretroom1Fun()
+                else:
+                    print('I have no clue what that means so your going in anyway')
+                    secretroom2()
         elif anw in C:    
                 if Light_On == False:
                     print('You look for the ladder but you trip and fall instead\n')
@@ -215,7 +223,23 @@ def secretroom1():
             secretroom1Fun()
     print('\nyou are in a large damp cold room, the lights are off')
     secretroom1Fun()
-    
+   
+def secretroom2():
+    def secretroom2Fun():
+        print('You can, A) open the chest B) leave the room\n')
+        anw = input('>')
+        if anw in A:
+            print('You open the chest and...\n\n\n House \n\n')
+            time.sleep(2)
+            print('Made by...'\n\n)
+            time.sleep(1)
+            print('Cohen'\n\n)
+            time.sleep(1)
+            print('And Simeon')
+        elif anw in B:
+            secretroom1()
+        else:
+         print('please input a, or b')
     
 def PLAY_GAME():
     def PLAY_GAME_Fun():
