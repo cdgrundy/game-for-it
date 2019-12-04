@@ -30,7 +30,10 @@ def outside():
             elif anw in No:
                 print('\nok')
             elif anw in I:
-                inventory
+                print('')
+                print(inventory)
+                time.sleep(2)
+                print('')
                 outsideFun()
             else: 
                 print('\nIll take that as a no. ')
@@ -51,7 +54,10 @@ def door():
         elif anw in B:
             outside()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             doorFun()
         else:
             print('\nplease input a, or b')
@@ -74,7 +80,10 @@ def hallway():
         elif anw in D:
             outside()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             hallwayFun()
         else:
             print('\nplease input a, b, or c')
@@ -109,7 +118,10 @@ def room1():
         elif anw in C:
             hallway()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             room1Fun()
         else:
             print('\nplease input a, b, or c')
@@ -140,7 +152,10 @@ def Crib():
         elif awn in D:
             room2()   
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             cribFun()
         else:
             print('\nplease input a, b, or c')
@@ -151,6 +166,7 @@ def Crib():
 
 def room2():
     def room2Fun():
+        global inventory
         print('You can, A) look in the bunk beds B) look in the crib C) go back to the hallway\n')
         anw = input('>') 
         if anw in A:
@@ -161,7 +177,10 @@ def room2():
         elif anw in C:
             hallway()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             room2Fun()
         else:
             print('\nplease input a, b, or c')
@@ -172,24 +191,9 @@ def room2():
 
 def room3():
     def room3Fun():
-        global inventory
-        global HaveKnife
-        print('You can, A) search the room B) go down stairs C) go back out the door\n') 
-        anw = input('>')
-        if anw in A:
-            room3Fun2()
-        elif anw in B:
-            garage()
-        elif anw in C:
-            hallway()
-        elif anw in I:
-            inventory
-            room3Fun()
-        else:
-            print('\nplease input a, b, or c')
-            room3Fun()
         def room3Fun2():
             global inventory
+            global HaveKnife
             if HaveKnife == False:
                 print('\nyou find some moldy food and a knife.\ndo you want to pick up the knife?\n')
                 anw = input('>')
@@ -201,7 +205,10 @@ def room3():
                 elif anw in No:
                     Room3Fun()
                 elif anw in I:
-                    inventory
+                    print('')
+                    print(inventory)
+                    time.sleep(2)
+                    print('')
                     room3Fun2()
                 else:
                     print('please answer yes or no')
@@ -209,6 +216,25 @@ def room3():
             else:
                 print('\nyou find some moldy food')
                 room3Fun()
+        global inventory
+        global HaveKnife
+        print('You can, A) search the room B) go down stairs C) go back out the door\n') 
+        anw = input('>')
+        if anw in A:
+            room3Fun2()
+        elif anw in B:
+            garage()
+        elif anw in C:
+            hallway()
+        elif anw in I:
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
+            room3Fun()
+        else:
+            print('\nplease input a, b, or c')
+            room3Fun()
     print('\nYou are in a small kitchen. There are cupboards and a stove top. There is a staircase leading down.')
     room3Fun()
     
@@ -239,7 +265,10 @@ def garage():
                 print('\nYou take an old cape sitting on the ground and put it on. After a while of searching you come across a robbery! You run in \nand try and stop the burgalurs but they beat you up. You walk back, defeated.')
                 outside()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             garageFun()
         else:
             print('\nplease input an answer')       
@@ -287,7 +316,10 @@ def secretroom1():
                     print('\nyou climb out of the crib')
                     Crib()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             secretroom1Fun()
         else:
             print('please input a, b, or ,c')
@@ -311,7 +343,10 @@ def secretroom2():
         elif anw in B:
             secretroom1()
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             secretroom2Fun
         else:
             print('please input a, or b')
@@ -335,7 +370,10 @@ def PLAY_GAME():
             else: 
                 print('\nIll take that as a no. ')
         elif anw in I:
-            inventory
+            print('')
+            print(inventory)
+            time.sleep(2)
+            print('')
             PLAY_GAME_Fun()
         else:
             print('please input a, or b\n')
