@@ -225,7 +225,7 @@ def room3():
                     inventory.append('knife')
                     room3Fun()
                 elif anw in No:
-                    Room3Fun()
+                    room3Fun()
                 elif anw in I:
                     print('')
                     print(inventory)
