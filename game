@@ -362,6 +362,13 @@ def secretroom2():
             print('Cohen\n\n')
             time.sleep(1)
             print('And Simeon')
+            time.sleep(3)
+            print('\n\nDo you want to keep playing')
+            anw = input('>')
+                if anw in Yes:
+                    secretroom2fun
+                if anw in No:
+                    print('\nOk')
         elif anw in B:
             secretroom1()
         elif anw in I:
@@ -374,6 +381,8 @@ def secretroom2():
             print('please input a, or b')
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
+
+
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         global inventory
