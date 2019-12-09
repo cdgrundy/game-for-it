@@ -9,6 +9,7 @@ No = ['N', 'n', 'No', 'no']
 I = ['I','i','eye']
 HaveDoll = False
 HaveKnife = False
+HaveToad = False
 TV_On = False
 OnOrOff = ('on')
 Light_On = False
@@ -95,27 +96,41 @@ def hallway():
         
 def room1():
     def room1Fun():
+        def room1Fun2():
+            global HaveToad
+            global inventory
+            if HaveToad = False:
+                print('There is nothing of interest in this room exept for a small toad\nDo you want to take it?')
+                anw = input('>')
+                if anw in Yes:
+                    print('You quickly grab the little toad off of the floor and shove it into your backpack.')
+                    room1Fun()
+                elif anw in No:
+                    print('ok')
+                    room1Fun()
+                elif anw in I:
+                    print(inventory)
+                else:
+                    print('please input yes, or no')
+                    room1Fun2()
+             else:
+                print('please input yes, or no')
         global inventory
         global OnOrOff
         global TV_On
         print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('\nThere is nothing of interest in this room exept for a small toad')
-            OnOrOff = room1Fun()
+            room1Fun2()
         elif anw in B:
             if TV_On == False:
                 TV_On = True
                 print('\nYou turn the TV on and cartoons start blaring out of it')
                 OnOrOff = ('off')
-                OnOrOff = room1Fun()
-                return OnOrOff
             else:
                 TV_On = False
                 print('\nYou turn the cartoons back off')
                 OnOrOff = ('on')
-                OnOrOff = room1Fun()
-                return OnOrOff
         elif anw in C:
             hallway()
         elif anw in I:
@@ -126,9 +141,8 @@ def room1():
             room1Fun()
         else:
             print('\nplease input a, b, or c')
-            OnOrOff = room1Fun()
     print('\nYou\'re in a large room, with a couch at one end and a TV at the other')
-    OnOrOff = room1Fun()
+    room1Fun()
     
     
 def Crib():
@@ -156,6 +170,8 @@ def Crib():
                 else:
                     print('please input yes or no')
                     cribFun2()
+            else:
+                print('you can't find much else')
         global inventory
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         anw = input('>')
@@ -362,13 +378,6 @@ def secretroom2():
             print('Cohen\n\n')
             time.sleep(1)
             print('And Simeon')
-            time.sleep(3)
-            print('\n\nDo you want to keep playing')
-            anw = input('>')
-                if anw in Yes:
-                    secretroom2fun
-                if anw in No:
-                    print('\nOk')
         elif anw in B:
             secretroom1()
         elif anw in I:
@@ -381,8 +390,6 @@ def secretroom2():
             print('please input a, or b')
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
-
-
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         global inventory
