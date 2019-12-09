@@ -6,7 +6,8 @@ C = ['c', 'C', 'see']
 D = ['d', 'D', 'dee']
 Yes = ['Y', 'y', 'Yes', 'yes']
 No = ['N', 'n', 'No', 'no']
-I = ['I','i']
+I = ['I','i','eye']
+HaveDoll = False
 HaveKnife = False
 TV_On = False
 OnOrOff = ('on')
@@ -100,7 +101,7 @@ def room1():
         print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
-            print('\nThere is nothing of interest in this room')
+            print('\nThere is nothing of interest in this room exept for a small toad')
             OnOrOff = room1Fun()
         elif anw in B:
             if TV_On == False:
@@ -132,24 +133,45 @@ def room1():
     
 def Crib():
     def cribFun():
-        global inventory
         global TV_On
+        global inventory
+        def cribFun2():
+            global HaveDoll
+            if HaveDoll == False:
+                print('\nYou find a creepy old doll\nDo you want to take it?\n')
+                anw = input('>')
+                if anw in Yes:
+                    HaveDoll = True
+                    inventory.append('doll')
+                    print('\nyou take the doll')
+                    cribFun()
+                elif anw in No:
+                    print('\nok')
+                    cribFun()
+                elif anw in I:
+                    print('')
+                    print(inventory)
+                    time.sleep(2)
+                    cribFun2()
+                else:
+                    print('please input yes or no')
+                    cribFun2()
+        global inventory
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
-        awn = input('>')
-        if awn in A:
-            print('\nYou find a creepy old doll')
-            cribFun()
-        elif awn in B:
+        anw = input('>')
+        if anw in A:
+            cribFun2()
+        elif anw in B:
             print('\nThe matress feels very soft and squishy')
             cribFun()
-        elif awn in C:
+        elif anw in C:
             if TV_On == True: 
                 print('\nYou lie there for a while then suddenly, you fall through')
                 secretroom1()
             else:
                 print('\nYou lie there for a while but nothing happens')
                 cribFun()
-        elif awn in D:
+        elif anw in D:
             room2()   
         elif anw in I:
             print('')
@@ -327,7 +349,6 @@ def secretroom1():
     print('\nyou are in a large damp cold room, the lights are off')
     secretroom1Fun()
 
-
 def secretroom2():  
     def secretroom2Fun():
         global inventory
@@ -341,7 +362,6 @@ def secretroom2():
             print('Cohen\n\n')
             time.sleep(1)
             print('And Simeon')
-            secretroom2Fun
         elif anw in B:
             secretroom1()
         elif anw in I:
@@ -354,8 +374,6 @@ def secretroom2():
             print('please input a, or b')
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
-
-
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         global inventory
