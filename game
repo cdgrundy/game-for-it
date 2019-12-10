@@ -113,7 +113,7 @@ def room1():
                 else:
                     print('please input yes, or no')
                     room1Fun2()
-             else:
+            else:
                 print('please input yes, or no')
         global inventory
         global OnOrOff
