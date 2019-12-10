@@ -99,11 +99,12 @@ def room1():
         def room1Fun2():
             global HaveToad
             global inventory
-            if HaveToad = False:
-                print('There is nothing of interest in this room exept for a small toad\nDo you want to take it?')
+            if HaveToad == False:
+                print('There is nothing of interest in this room exept for a small toad\nDo you want to take it?\n')
                 anw = input('>')
                 if anw in Yes:
                     print('You quickly grab the little toad off of the floor and shove it into your backpack.')
+                    inventory.append('toad')
                     room1Fun()
                 elif anw in No:
                     print('ok')
@@ -141,6 +142,7 @@ def room1():
             room1Fun()
         else:
             print('\nplease input a, b, or c')
+            room1Fun()
     print('\nYou\'re in a large room, with a couch at one end and a TV at the other')
     room1Fun()
     
@@ -171,7 +173,7 @@ def Crib():
                     print('please input yes or no')
                     cribFun2()
             else:
-                print('you can't find much else')
+                print('you can\'t find much else')
         global inventory
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         anw = input('>')
