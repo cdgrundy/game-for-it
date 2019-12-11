@@ -289,6 +289,7 @@ def garage():
         
 def secretroom1():
     def secretroom1Fun():
+        global HaveToad
         global inventory
         global Light_On
         global OnOrOff2
@@ -310,15 +311,19 @@ def secretroom1():
                 print('\n You fumble around in the dark for a while and find nothing.\n')
                 secretroom1Fun()
             else:
-                print('\nYou look around and after a while you step on a pressure plate and a door opens in front of you\nDo you want to go in?\n')
-                anw = input('>')
-                if anw in Yes:
-                    secretroom2()
-                elif anw in No:
-                    secretroom1Fun()
+                if HaveToad == True:
+                    print('\nYou look around and then the toad jumps out of your bag and triggers a pressure plate making a door opens in front of you\nDo you want to go in?\n')
+                    anw = input('>')
+                    if anw in Yes:
+                        secretroom2()
+                    elif anw in No:
+                        secretroom1Fun()
+                    else:
+                        print('I have no clue what that means so your going in anyway')
+                        secretroom2()
                 else:
-                    print('I have no clue what that means so your going in anyway')
-                    secretroom2()
+                    print('You look around but can\'t find anything out of the ordinary')
+                    secretroom1Fun()
         elif anw in C:    
                 if Light_On == False:
                     print('You look for the ladder but you trip and fall instead\n')
@@ -334,6 +339,7 @@ def secretroom1():
             secretroom1Fun()
     print('\nyou are in a large damp cold room, the lights are off')
     secretroom1Fun()
+
 
 def secretroom2():  
     def secretroom2Fun():
@@ -357,6 +363,8 @@ def secretroom2():
             print('please input a, or b')
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
+
+
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         global inventory
