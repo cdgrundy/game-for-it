@@ -80,9 +80,7 @@ def hallway():
         elif anw in D:
             outside()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             hallwayFun()
         else:
             print('\nplease input a, b, or c')
