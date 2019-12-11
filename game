@@ -94,16 +94,16 @@ def room1():
                 print('There is nothing of interest in this room exept for a small toad\nDo you want to take it?\n')
                 anw = input('>')
                 if anw in Yes:
-                    print('You quickly grab the little toad off of the floor and shove it into your backpack.')
+                    print('\nYou quickly grab the little toad off of the floor and shove it into your backpack.')
                     inventory.append('toad')
                     room1Fun()
                 elif anw in No:
-                    print('ok')
+                    print('\nok')
                     room1Fun()
                 elif anw in I:
                     print(inventory)
                 else:
-                    print('please input yes, or no')
+                    print('\nplease input yes, or no')
                     room1Fun2()
             else:
                 print('please input yes, or no')
