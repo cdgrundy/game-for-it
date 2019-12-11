@@ -34,7 +34,6 @@ def outside():
             elif anw in I:
                 print('')
                 print(inventory)
-                time.sleep(2)
                 print('')
                 outsideFun()
             else: 
@@ -58,7 +57,6 @@ def door():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             doorFun()
         else:
@@ -84,7 +82,6 @@ def hallway():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             hallwayFun()
         else:
@@ -137,7 +134,6 @@ def room1():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             room1Fun()
         else:
@@ -167,7 +163,6 @@ def Crib():
                 elif anw in I:
                     print('')
                     print(inventory)
-                    time.sleep(2)
                     cribFun2()
                 else:
                     print('please input yes or no')
@@ -194,7 +189,6 @@ def Crib():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             cribFun()
         else:
@@ -219,7 +213,6 @@ def room2():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             room2Fun()
         else:
@@ -247,7 +240,6 @@ def room3():
                 elif anw in I:
                     print('')
                     print(inventory)
-                    time.sleep(2)
                     print('')
                     room3Fun2()
                 else:
@@ -269,7 +261,6 @@ def room3():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             room3Fun()
         else:
@@ -307,7 +298,6 @@ def garage():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             garageFun()
         else:
@@ -358,7 +348,6 @@ def secretroom1():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             secretroom1Fun()
         else:
@@ -385,7 +374,6 @@ def secretroom2():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             secretroom2Fun
         else:
@@ -412,7 +400,6 @@ def PLAY_GAME():
         elif anw in I:
             print('')
             print(inventory)
-            time.sleep(2)
             print('')
             PLAY_GAME_Fun()
         else:
