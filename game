@@ -32,9 +32,7 @@ def outside():
             elif anw in No:
                 print('\nok')
             elif anw in I:
-                print('')
-                print(inventory)
-                print('')
+                print('\n',inventory,'\n')
                 outsideFun()
             else: 
                 print('\nIll take that as a no. ')
@@ -55,9 +53,7 @@ def door():
         elif anw in B:
             outside()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             doorFun()
         else:
             print('\nplease input a, or b')
@@ -130,9 +126,7 @@ def room1():
         elif anw in C:
             hallway()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             room1Fun()
         else:
             print('\nplease input a, b, or c')
@@ -159,8 +153,7 @@ def Crib():
                     print('\nok')
                     cribFun()
                 elif anw in I:
-                    print('')
-                    print(inventory)
+                    print('\n',inventory,'\n')
                     cribFun2()
                 else:
                     print('please input yes or no')
@@ -185,9 +178,7 @@ def Crib():
         elif anw in D:
             room2()   
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             cribFun()
         else:
             print('\nplease input a, b, or c')
@@ -209,9 +200,7 @@ def room2():
         elif anw in C:
             hallway()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             room2Fun()
         else:
             print('\nplease input a, b, or c')
@@ -236,9 +225,7 @@ def room3():
                 elif anw in No:
                     room3Fun()
                 elif anw in I:
-                    print('')
-                    print(inventory)
-                    print('')
+                    print('\n',inventory,'\n')
                     room3Fun2()
                 else:
                     print('please answer yes or no')
@@ -257,9 +244,7 @@ def room3():
         elif anw in C:
             hallway()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             room3Fun()
         else:
             print('\nplease input a, b, or c')
@@ -294,9 +279,7 @@ def garage():
                 print('\nYou take an old cape sitting on the ground and put it on. After a while of searching you come across a robbery! You run in \nand try and stop the burgalurs but they beat you up. You walk back, defeated.')
                 outside()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             garageFun()
         else:
             print('\nplease input an answer')       
@@ -344,9 +327,7 @@ def secretroom1():
                     print('\nyou climb out of the crib')
                     Crib()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             secretroom1Fun()
         else:
             print('please input a, b, or ,c')
@@ -370,9 +351,7 @@ def secretroom2():
         elif anw in B:
             secretroom1()
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             secretroom2Fun
         else:
             print('please input a, or b')
@@ -396,9 +375,7 @@ def PLAY_GAME():
             else: 
                 print('\nIll take that as a no. ')
         elif anw in I:
-            print('')
-            print(inventory)
-            print('')
+            print('\n',inventory,'\n')
             PLAY_GAME_Fun()
         else:
             print('please input a, or b\n')
