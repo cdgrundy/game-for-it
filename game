@@ -91,11 +91,12 @@ def room1():
             global HaveToad
             global inventory
             if HaveToad == False:
-                print('There is nothing of interest in this room exept for a small toad\nDo you want to take it?\n')
+                print('There is nothing of interest in this room except for a small toad\nDo you want to take it?\n')
                 anw = input('>')
                 if anw in Yes:
                     print('\nYou quickly grab the little toad off of the floor and shove it into your backpack.')
                     inventory.append('toad')
+                    HaveToad = True
                     room1Fun()
                 elif anw in No:
                     print('\nok')
@@ -119,6 +120,7 @@ def room1():
                 TV_On = True
                 print('\nYou turn the TV on and cartoons start blaring out of it')
                 OnOrOff = ('off')
+                room1Fun()
             else:
                 TV_On = False
                 print('\nYou turn the cartoons back off')
@@ -297,7 +299,7 @@ def secretroom1():
         anw = input('>')
         if anw in A:
             if Light_On == False:
-                print('\nYou find the light switch and are momentarily blinded\n')
+                print('\nYou find the light switch and are momentarily blinded')
                 OnOrOff2 = ('off')
                 Light_On = True
                 secretroom1Fun()
@@ -354,6 +356,7 @@ def secretroom2():
             print('Cohen\n\n')
             time.sleep(1)
             print('And Simeon')
+            secretroom2Fun()
         elif anw in B:
             secretroom1()
         elif anw in I:
