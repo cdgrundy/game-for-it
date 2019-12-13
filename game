@@ -107,8 +107,8 @@ def room1():
                     print('\nplease input yes, or no')
                     room1Fun2()
             else:
-                 print('\nplease input yes, or no')
-                 room1Fun2()
+                print('there\'s nothing else interesting in this room')
+                room1Fun()
         global inventory
         global OnOrOff
         global TV_On
