@@ -14,7 +14,9 @@ TV_On = False
 OnOrOff = ('on')
 Light_On = False
 OnOrOff2 = ('on')
-
+HavePill = False
+CreditsWatched = False
+HaveSword = False
 
 def outside():
     def outsideFun():
@@ -107,12 +109,11 @@ def room1():
                     print('\nplease input yes, or no')
                     room1Fun2()
             else:
-                print('there\'s nothing else interesting in this room')
-                room1Fun()
+                print('please input yes, or no')
         global inventory
         global OnOrOff
         global TV_On
-        print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go back out to the hallway\n')
+        print('You can, A) Search room B) Turn',OnOrOff, 'TV C) go upwards D) go back out to the hallway\n')
         anw = input('>') 
         if anw in A:
             room1Fun2()
@@ -127,6 +128,8 @@ def room1():
                 print('\nYou turn the cartoons back off')
                 OnOrOff = ('on')
         elif anw in C:
+            upstairhall()
+        elif  anw in D:
             hallway()
         elif anw in I:
             print('\n',inventory,'\n')
@@ -134,7 +137,7 @@ def room1():
         else:
             print('\nplease input a, b, or c')
             room1Fun()
-    print('\nYou\'re in a large room, with a couch at one end and a TV at the other')
+    print('\nYou\'re in a large room, with a couch at one end and a TV at the other and a staircase leading upwards')
     room1Fun()
     
     
@@ -347,16 +350,32 @@ def secretroom1():
 def secretroom2():  
     def secretroom2Fun():
         global inventory
+        global CreditsWatched
+        global HaveSword
         print('You can, A) open the chest B) leave the room\n')
         anw = input('>')
         if anw in A:
-            print('You open the chest and...\n\n\nHouse \n\n')
-            time.sleep(2)
-            print('Made by...\n\n')
-            time.sleep(1)
-            print('Cohen\n\n')
-            time.sleep(1)
-            print('And Simeon')
+            if CreditsWatched == False:
+                print('You open the chest and...\n\n\nHouse \n\n')
+                time.sleep(2)
+                print('Made by...\n\n')
+                time.sleep(1)
+                print('Cohen\n\n')
+                time.sleep(1)
+                print('And Simeon')
+                CreditsWatched = True
+            else:
+                if HaveSword == False:
+                    print('\nThere is a Large shinny sword. Do you wan\'t to take it?\n')
+                    anw = input('>')
+                    if anw in Yes:
+                        print('\nYou put the sword in you belt')
+                        inventory.append('sword')
+                        secretroom2Fun()
+                        HaveSword = True
+                else:
+                    print('this chest is empty')
+                    secretroom()
             secretroom2Fun()
         elif anw in B:
             secretroom1()
@@ -368,7 +387,70 @@ def secretroom2():
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
 
-
+    
+def upstairhall():
+    def upstairhallFun():
+        global inventory
+        print('You can A) go left B) go forward C) go right D) go downstairs\n')
+        anw = input('>')
+        if anw in A:
+            upstairsroom1()
+        elif anw in B:
+            print('doesn\'t exist')
+            upstairhall()
+        elif anw in C:
+            print('doesn\'t exist')
+            upstairhall()
+        elif anw in D:
+            room1()
+        else:
+            print('please input a, b, or  c\n')
+            upstairhallFun()
+    print('\nYou are in a dark hallway, you can\'t find a lightswitch but can see fine so it doesn\'t matter')
+    upstairhallFun()
+    
+    
+def upstairsroom1():
+    def upstairsroom1Fun():
+        global inventory
+        global HavePill
+        print('you can A) search room B) have a bath C) leave room\n')
+        anw = input('>')
+        if anw in A:
+            print('\nyou look in the tub and find nothing so you look in the cupboards and find some pills\ndo you want to take the pills?\n')
+            anw = input('>')
+            if HavePill == False:
+                if anw in Yes:
+                    print('\nyou grab the pills and ingest them, you immediately start to feel weird')
+                    HavePill = True
+                    upstairsroom1Fun()
+                elif anw in No:
+                    print('\nOk')
+                    upstairsroom1Fun()
+                else:
+                    print('please input yes or no')
+            else:
+                print('you can\'t find anything in this room')
+        elif anw in B:
+            print('\nyou take a bath and start to relax, after a half hour you get out\n')
+            upstairsroom1Fun()
+        elif anw in C:
+            if HavePill == True:
+                print('\nYou step out the door and die (it was from the pills)\ndo you want to restart?')
+                anw = input('>')
+                if anw in Yes:
+                    PLAY_GAME()
+                if anw in No:
+                    print('Ok')
+            else:
+                upstairhall()
+        else:
+            print('please input a, b or c\n')
+            upstairoom1Fun()
+    print('\nthe room is a small bathroom with a tub and some cupboards')
+    upstairsroom1Fun()
+    
+    
 def PLAY_GAME():
     def PLAY_GAME_Fun():
         global inventory
@@ -390,7 +472,7 @@ def PLAY_GAME():
             print('\n',inventory,'\n')
             PLAY_GAME_Fun()
         else:
-            print('please input a, or b\n')
+            print('please input a, or b')
             PLAY_GAME_Fun()
     print('\nYou are standing outside of a large old house. The paint is peeling and the windows are shattered and boarded up')
     PLAY_GAME_Fun()
