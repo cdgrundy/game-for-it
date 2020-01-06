@@ -1,3 +1,4 @@
+#i think it work
 inventory = []
 import time
 A = ['a', 'A', 'ay']
@@ -17,6 +18,7 @@ OnOrOff2 = ('on')
 HavePill = False
 CreditsWatched = False
 HaveSword = False
+SecretDoorOpen = False
 
 def outside():
     def outsideFun():
@@ -299,6 +301,7 @@ def secretroom1():
         global inventory
         global Light_On
         global OnOrOff2
+        global SecretDoorOpen
         print('You can A) Turn',OnOrOff2, 'the light B) Search room C) Go back up\n')
         anw = input('>')
         if anw in A:
@@ -318,15 +321,25 @@ def secretroom1():
                 secretroom1Fun()
             else:
                 if HaveToad == True:
-                    print('\nYou look around and then the toad jumps out of your bag and triggers a pressure plate making a door opens in front of you\nDo you want to go in?\n')
-                    anw = input('>')
-                    if anw in Yes:
-                        secretroom2()
-                    elif anw in No:
-                        secretroom1Fun()
+                    if SecretDoorOpen == False:
+                        print('\nYou look around and then the toad jumps out of your bag and triggers a pressure plate making a door opens in front of you, you pick up the toad and put it back in your pack\nDo you want to go in?\n')
+                        anw = input('>')
+                        if anw in Yes:
+                            secretroom2()
+                        elif anw in No:
+                            print('\nOk\n')
+                            secretroom1Fun()
+                        else:
+                            print('I have no clue what that means so your going in anyway')
+                            secretroom2()
                     else:
-                        print('I have no clue what that means so your going in anyway')
-                        secretroom2()
+                        print('The only thing in this room is the secret door\ndo you want to go through?')
+                        anw = input('>')
+                        if anw in Yes:
+                            secretroom2()
+                        else:
+                            print('\nOk')
+                            secretroom1Fun
                 else:
                     print('You look around but can\'t find anything out of the ordinary')
                     secretroom1Fun()
@@ -362,7 +375,8 @@ def secretroom2():
                 time.sleep(1)
                 print('Cohen\n\n')
                 time.sleep(1)
-                print('And Simeon')
+                print('And Simeon\n')
+                time.sleep(2)
                 CreditsWatched = True
             else:
                 if HaveSword == False:
@@ -373,6 +387,8 @@ def secretroom2():
                         inventory.append('sword')
                         secretroom2Fun()
                         HaveSword = True
+                    if anw in No:
+                        print('Ok\n')
                 else:
                     print('this chest is empty')
                     secretroom()
@@ -384,6 +400,7 @@ def secretroom2():
             secretroom2Fun
         else:
             print('please input a, or b')
+            secretroom2Fun()
     print('\nYou are in a very small room with a chest at it\'s center')
     secretroom2Fun()        
 
