@@ -431,6 +431,7 @@ def upstairsroom1():
     def upstairsroom1Fun():
         global inventory
         global HavePill
+        global HaveSword
         print('you can A) search room B) have a bath C) leave room\n')
         anw = input('>')
         if anw in A:
@@ -449,7 +450,18 @@ def upstairsroom1():
             else:
                 print('you can\'t find anything in this room')
         elif anw in B:
-            print('\nyou take a bath and start to relax, after a half hour you get out\n')
+            print('\nyou take a bath and start to relax, after a half hour you get out. Suddenly, a giant troll crashes through the door\n')
+            if HaveSword == False:
+                print('and the troll eats you. You are dead\n')
+                print('do you want to restart?')
+                anw = input('>')
+                if anw in Yes:
+                    PLAY_GAME()
+                elif anw in No:
+                    print('Ok')
+                else:
+                    print('I don\'t know what that means so you\'re revived')
+                    PLAY_GAME()
             upstairsroom1Fun()
         elif anw in C:
             if HavePill == True:
