@@ -1,4 +1,4 @@
-#i think it work
+#newest
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -476,6 +476,45 @@ def upstairsroom1():
             upstairoom1Fun()
     print('\nthe room is a small bathroom with a tub and some cupboards')
     upstairsroom1Fun()
+    
+
+def upstairsroom2():
+    def upstairsroom2Fun():
+        def upstairsroom2Fun2():
+            print('\nYou look around the room and the only thing of interest is a old book in the book shelf \n do you want to take it?')
+            anw = input('>')
+            if anw in Yes:
+                print('\nYou take the book and put it in your bag\n')
+                HaveBook = True
+                upstairsroom2Fun()
+            elif anw in No:
+                print('\nOk\n')
+                upstairsroom2Fun
+            else:
+                print('Please input yes or no')
+                upstairsroom2Fun2()
+        global inventory
+        global HaveBook
+        print('\nYou can A) search room B) go through the door C) take a nap D) leave room\n')
+        anw = input('>')
+        if anw in A:
+            if HaveBook == False:
+                upstairsroom2Fun2()
+            else:
+                print('\nThere is nothing interesting in this room')
+                upstairsroom2Fun()
+        if anw in B:
+            print('\nNOT YET\n')
+            upstairsroom2Fun()
+        if anw in C:
+            print('\nYou take a nap\n')
+            time.sleep(1)
+            upstairsroom2Fun()
+        if anw in D:
+            upstairshall()
+        if anw in I:
+            print('\n',inventory,'\n')
+            upstairsroom2Fun()
     
     
 def PLAY_GAME():
