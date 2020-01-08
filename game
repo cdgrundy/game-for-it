@@ -1,6 +1,5 @@
 #i think it work
 inventory = []
-import time
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
 C = ['c', 'C', 'see']
@@ -16,7 +15,6 @@ OnOrOff = ('on')
 Light_On = False
 OnOrOff2 = ('on')
 HavePill = False
-CreditsWatched = False
 HaveSword = False
 SecretDoorOpen = False
 
@@ -129,6 +127,7 @@ def room1():
                 TV_On = False
                 print('\nYou turn the cartoons back off')
                 OnOrOff = ('on')
+                room1Fun()
         elif anw in C:
             upstairhall()
         elif  anw in D:
@@ -168,6 +167,7 @@ def Crib():
                     cribFun2()
             else:
                 print('you can\'t find much else')
+                cribFun()
         global inventory
         print('You can A) Search crib B) Feel matress C) Enter crib D) Walk away from crib\n')
         anw = input('>')
@@ -362,42 +362,40 @@ def secretroom1():
 
 def secretroom2():  
     def secretroom2Fun():
+        def secretroom2Fun2():
+            global HaveSword
+            global inventory
+            if HaveSword == False:
+                print('\nThere is a Large shinny sword in the chest. Do you wan\'t to take it?\n')
+                anw = input('>')
+                if anw in Yes:
+                    print('\nYou put the sword in you belt')
+                    inventory.append('sword')
+                    secretroom2Fun()
+                    HaveSword = True
+                elif anw in No:
+                    print('Ok\n')
+                    secretroom2Fun()
+                elif anw in I:
+                    print('\n',inventory,'\n')
+                    secretroom2Fun2()
+                else:
+                    print('please input yes or no')
+                    secretroom2Fun2()
+            else:
+                print('this chest is empty')
+                secretroom()
         global inventory
-        global CreditsWatched
         global HaveSword
         print('You can, A) open the chest B) leave the room\n')
         anw = input('>')
         if anw in A:
-            if CreditsWatched == False:
-                print('You open the chest and...\n\n\nHouse \n\n')
-                time.sleep(2)
-                print('Made by...\n\n')
-                time.sleep(1)
-                print('Cohen\n\n')
-                time.sleep(1)
-                print('And Simeon\n')
-                time.sleep(2)
-                CreditsWatched = True
-            else:
-                if HaveSword == False:
-                    print('\nThere is a Large shinny sword. Do you wan\'t to take it?\n')
-                    anw = input('>')
-                    if anw in Yes:
-                        print('\nYou put the sword in you belt')
-                        inventory.append('sword')
-                        secretroom2Fun()
-                        HaveSword = True
-                    if anw in No:
-                        print('Ok\n')
-                else:
-                    print('this chest is empty')
-                    secretroom()
-            secretroom2Fun()
+                secretroom2Fun2()
         elif anw in B:
             secretroom1()
         elif anw in I:
             print('\n',inventory,'\n')
-            secretroom2Fun
+            secretroom2Fun()
         else:
             print('please input a, or b')
             secretroom2Fun()
