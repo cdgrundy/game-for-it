@@ -1,4 +1,4 @@
-#newest
+# even newer
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -467,8 +467,10 @@ def upstairsroom1():
                 anw = input('>')
                 if anw in Yes:
                     PLAY_GAME()
-                if anw in No:
+                elif anw in No:
                     print('Ok')
+                else:
+                    print('I don\'t know waht you\'re saying so get revived')
             else:
                 upstairhall()
         else:
@@ -495,7 +497,7 @@ def upstairsroom2():
                 upstairsroom2Fun2()
         global inventory
         global HaveBook
-        print('\nYou can A) search room B) go through the door C) take a nap D) leave room\n')
+        print('\nYou can A) search room B) take a nap C) leave room\n')
         anw = input('>')
         if anw in A:
             if HaveBook == False:
@@ -504,13 +506,10 @@ def upstairsroom2():
                 print('\nThere is nothing interesting in this room')
                 upstairsroom2Fun()
         if anw in B:
-            print('\nNOT YET\n')
-            upstairsroom2Fun()
-        if anw in C:
             print('\nYou take a nap\n')
             time.sleep(1)
             upstairsroom2Fun()
-        if anw in D:
+        if anw in C:
             upstairshall()
         if anw in I:
             print('\n',inventory,'\n')
