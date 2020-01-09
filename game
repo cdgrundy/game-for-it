@@ -1,4 +1,4 @@
-# even newer
+# im re3al cojpsojg
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -411,12 +411,8 @@ def upstairhall():
         if anw in A:
             upstairsroom1()
         elif anw in B:
-            print('doesn\'t exist')
-            upstairhall()
+            upstairsroom2()
         elif anw in C:
-            print('doesn\'t exist')
-            upstairhall()
-        elif anw in D:
             room1()
         else:
             print('please input a, b, or  c\n')
