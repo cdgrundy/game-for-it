@@ -406,7 +406,7 @@ def secretroom2():
 def upstairhall():
     def upstairhallFun():
         global inventory
-        print('You can A) go left B) go forward C) go right D) go downstairs\n')
+        print('You can A) go left B) go forward C) go downstairs\n')
         anw = input('>')
         if anw in A:
             upstairsroom1()
