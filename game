@@ -1,4 +1,4 @@
-# smorgis borgis  you penis is smol
+# skdfjnbsdfjjhbsdefkljjhbsdfkbh
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -459,6 +459,9 @@ def upstairsroom1():
                 else:
                     print('I don\'t know what that means so you\'re revived')
                     PLAY_GAME()
+            else:
+                print('You fight with the troll and eventually kill it')
+                upstairsroom1Fun()
             upstairsroom1Fun()
         elif anw in C:
             if HavePill == True:
