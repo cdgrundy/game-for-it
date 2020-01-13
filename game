@@ -1,4 +1,4 @@
-# bingis bongus christopher colombus
+# smorgis borgis  you penis is smol
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -387,7 +387,7 @@ def secretroom2():
                     secretroom2Fun2()
             else:
                 print('this chest is empty')
-                secretroom()
+                secretroom2Fun()
         global inventory
         global HaveSword
         print('You can, A) open the chest B) leave the room\n')
