@@ -1,4 +1,4 @@
-# im re3al cojpsojg
+# bingis bongus christopher colombus
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -337,9 +337,12 @@ def secretroom1():
                         anw = input('>')
                         if anw in Yes:
                             secretroom2()
+                        elif anw in No:
+                            print('\nOk\n')
+                            secretroom1Fun()
                         else:
-                            print('\nOk')
-                            secretroom1Fun
+                            print('I have no clue what that means so your going in anyway')
+                            secretroom2()
                 else:
                     print('You look around but can\'t find anything out of the ordinary')
                     secretroom1Fun()
@@ -371,8 +374,8 @@ def secretroom2():
                 if anw in Yes:
                     print('\nYou put the sword in you belt')
                     inventory.append('sword')
-                    secretroom2Fun()
                     HaveSword = True
+                    secretroom2Fun()
                 elif anw in No:
                     print('Ok\n')
                     secretroom2Fun()
@@ -420,7 +423,7 @@ def upstairhall():
     print('\nYou are in a dark hallway, you can\'t find a lightswitch but can see fine so it doesn\'t matter')
     upstairhallFun()
     
-    
+    a
 def upstairsroom1():
     def upstairsroom1Fun():
         global inventory
@@ -429,9 +432,9 @@ def upstairsroom1():
         print('you can A) search room B) have a bath C) leave room\n')
         anw = input('>')
         if anw in A:
-            print('\nyou look in the tub and find nothing so you look in the cupboards and find some pills\ndo you want to take the pills?\n')
-            anw = input('>')
             if HavePill == False:
+                print('\nyou look in the tub and find nothing so you look in the cupboards and find some pills\ndo you want to take the pills?\n')
+                anw = input('>')
                 if anw in Yes:
                     print('\nyou grab the pills and ingest them, you immediately start to feel weird')
                     HavePill = True
