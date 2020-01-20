@@ -1,4 +1,4 @@
-# skdfjnbsdfjjhbsdefkljjhbsdfkbh
+# je suis mucho cohen
 inventory = []
 A = ['a', 'A', 'ay']
 B = ['b', 'B', 'bee'] 
@@ -109,7 +109,8 @@ def room1():
                     print('\nplease input yes, or no')
                     room1Fun2()
             else:
-                print('please input yes, or no')
+                print('there is nothing of interest in this room')
+                room1Fun()
         global inventory
         global OnOrOff
         global TV_On
@@ -417,6 +418,8 @@ def upstairhall():
             upstairsroom2()
         elif anw in C:
             room1()
+        elif anw in I:
+            print('\n',inventory,'\n')
         else:
             print('please input a, b, or  c\n')
             upstairhallFun()
@@ -519,6 +522,16 @@ def upstairsroom2():
     
     
 def PLAY_GAME():
+    HaveDoll = False
+    HaveKnife = False
+    HaveToad = False
+    TV_On = False
+    OnOrOff = ('on')
+    Light_On = False
+    OnOrOff2 = ('on')
+    HavePill = False
+    HaveSword = False
+    SecretDoorOpen = False
     def PLAY_GAME_Fun():
         global inventory
         print('You can, A) walk up to the door B) leave the house. You can acsess your inventory at any time by pressing I\n')
